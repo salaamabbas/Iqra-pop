@@ -1,0 +1,32 @@
+/* Enhanced visibility for headings and important text */
+
+/* Feature card headings (Why Choose Our Islamic School) */
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    color: #0a2550;
+    letter-spacing: 0.02em;
+}
+
+/* Course feature card headings */
+.course-feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    color: #0a2550;
+    letter-spacing: 0.02em;
+}
+
+/* Section headings */
+section h2 {
+    font-weight: 800;
+    color: #0a2550;
+    letter-spacing: 0.02em;
+}
+
+/* Feature icons - make them slightly larger */
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}

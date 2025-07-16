@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra Pop - Online School</title>
+    <meta name="description" content="Iqra Pop: Online school for Quran, Yasarna, Hadith memorisation, Arabic, and Swala. Join us for a 3-day free trial!">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Arabic Alphabet Tool Resources -->
+    <link rel="stylesheet" href="assets/arabic-alphabet.css">
+    <!-- Course Cards Styling -->
+    <link rel="stylesheet" href="assets/course-cards.css">
+    <link rel="stylesheet" href="assets/course-cards-update.css">
+    <!-- Enhanced Text Visibility -->
+    <link rel="stylesheet" href="assets/enhanced-visibility.css">
+    <script src="assets/arabic-alphabet.js" defer></script>
+</head>
+<body>
+    <!-- TOP BANNER ANNOUNCEMENT BAR -->
+    <div class="top-banner" id="top-banner">
+      <marquee class="banner-message">🎉 Get a 10% discount when you pay for 3 months at once! 🎉</marquee>
+    </div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo-placeholder.png" alt="Iqra Pop Logo" height="48">
+            <span>Iqra Pop</span>
+        </div>
+        <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li data-tooltip="Go to homepage"><a href="#home">Home</a></li>
+            <li data-tooltip="About our school"><a href="about.html">About</a></li>
+            <li data-tooltip="View all courses"><a href="#courses">Courses</a></li>
+            <li data-tooltip="How to pay"><a href="#payment">Fees</a></li>
+            <li data-tooltip="Meet our teachers"><a href="about.html#teachers">Teachers</a></li>
+            <!-- Talk to Teacher link removed -->
+            <li data-tooltip="Support a student"><a href="#support">Donate</a></li>
+            <li data-tooltip="Student feedback"><a href="#testimonials-main">Testimonials</a></li>
+            <li data-tooltip="Common questions"><a href="#faq">FAQ</a></li>
+            <li data-tooltip="Get in touch"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero animate-fadeInUp" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-flex">
+            <div class="hero-content">
+                <div class="hero-tagline">تعلم القرآن الكريم - Learn Quran</div>
+                <h1>Learn Qur'an The <span class="highlight">Easy Way</span>, From <span class="highlight">Anywhere!</span></h1>
+                <p class="hero-subtitle">Iqra Pop is an inclusive online Qur'an school offering quality Islamic education to learners of all levels</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-text">Learn via WhatsApp</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="feature-icon">💻</div>
+                        <div class="feature-text">Live Zoom and Google Meet Classes</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="feature-icon">🌙</div>
+                        <div class="feature-text">Flexible Scheduling</div>
+                    </div>
+                </div>
+                
+                <div class="hero-counters">
+                    <div class="hero-counter">
+                        <span class="counter-number" data-target="200">200</span>
+                        <span class="counter-label">Students</span>
+                    </div>
+                    <div class="hero-counter">
+                        <span class="counter-number" data-target="12">12</span>
+                        <span class="counter-label">Teachers</span>
+                    </div>
+                    <div class="hero-counter">
+                        <span class="counter-number" data-target="9">9</span>
+                        <span class="counter-label">Courses</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#courses" class="cta-btn primary-cta">Explore Courses</a>
+                    <a href="#talk-teacher" class="cta-btn secondary-cta">Talk to a Teacher</a>
+                </div>
+            </div>
+            
+            <div class="hero-illustration">
+                <div class="hero-image-container">
+                    <img src="assets/background.png" alt="Arabic Learning Illustration" loading="lazy">
+                    <div class="hero-badge">3 Days Free Trial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- ANIMATED COUNTERS SECTION -->
+<section class="stats-counters animate-fadeInUp" id="stats-counters">
+  <div class="counters-list">
+    <div class="counter-box">
+      <span class="counter-number" data-target="200">0</span>
+      <span class="counter-label">Students</span>
+    </div>
+    <div class="counter-box">
+      <span class="counter-number" data-target="12">0</span>
+      <span class="counter-label">Teachers</span>
+    </div>
+    <div class="counter-box">
+      <span class="counter-number" data-target="9">0</span>
+      <span class="counter-label">Courses</span>
+    </div>
+  </div>
+</section>
+<!-- END ANIMATED COUNTERS SECTION -->
+
+<!-- HOW IT WORKS SECTION (Qutor-inspired, blue/white scheme) -->
+    <section class="how-it-works animate-fadeInUp" id="how-it-works">
+  <div class="section-illustration"><img src="assets/how-steps.svg" alt="How It Works Illustration" loading="lazy" style="max-width:200px;width:100%;margin-bottom:1.2rem;"></div>
+      <h2>How It Works</h2>
+      <div class="how-steps">
+        <div class="how-step animate-fadeInUp animate-delay-1">
+          <div class="how-icon" aria-hidden="true">📝</div>
+          <h3>1. Sign Up</h3>
+          <p>Register for our Qur'an classes in just a few clicks and start your free trial.</p>
+        </div>
+        <div class="how-step animate-fadeInUp animate-delay-1">
+          <div class="how-icon" aria-hidden="true">💬</div>
+          <h3>2. Join Qur'an Classes</h3>
+          <p>Access your Qur'an lessons via WhatsApp, Google Meet or Zoom at your convenience.</p>
+        </div>
+        <div class="how-step animate-fadeInUp animate-delay-1">
+          <div class="how-icon" aria-hidden="true">🎓</div>
+          <h3>3. Learn & Progress</h3>
+          <p>Improve your Qur'an recitation and understanding with guidance from our expert teachers.</p>
+        </div>
+      </div>
+    </section>
+    <!-- END HOW IT WORKS SECTION -->
+
+    <!-- ABOUT US SECTION -->
+    <section class="about-section animate-fadeInUp" id="about">
+      <div class="section-illustration"><img src="assets/about-us.svg" alt="About Us Illustration" loading="lazy" style="max-width:200px;width:100%;margin-bottom:1.2rem;"></div>
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p>We are an inclusive Online Qur'an School that offers a variety of courses to learners of all levels, regardless of their financial or academic backgrounds. Our focus is on making Islamic knowledge accessible to everyone, and we are committed to keeping our courses affordable and within reach of all individuals.</p>
+        
+        <div class="about-columns">
+          <div class="about-column animate-fadeInUp animate-delay-1">
+            <h3>Our Mission</h3>
+            <p>Our goal is to foster a strong bond between servants and their Creator. We aim to achieve this by providing accessible and engaging Quranic education while considering the financial status for all.</p>
+          </div>
+          
+          <div class="about-column animate-fadeInUp animate-delay-1">
+            <h3>Our Vision</h3>
+            <p>We envision becoming a leading online Qur'an school providing quality education that strengthens the relationship between a servant and The Creator.</p>
+          </div>
+          
+          <div class="about-column animate-fadeInUp animate-delay-1">
+            <h3>Our Values</h3>
+            <ul class="values-list">
+              <li>Flexibility</li>
+              <li>Excellence</li>
+              <li>Teamwork</li>
+              <li>Integrity</li>
+              <li>Progress</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="about-cta">
+          <a href="about.html" class="cta-btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT US SECTION -->
+
+    <!-- FEATURES/BENEFITS SECTION (Qutor-style, blue/white scheme) -->
+    <section class="features animate-fadeInUp" id="features">
+      <div class="section-illustration"><img src="assets/teamwork.svg" alt="Benefits Illustration" loading="lazy" style="max-width:200px;width:100%;margin-bottom:1.2rem;"></div>
+      <h2>Why Choose Our Qur'an School</h2>
+      <div class="feature-list">
+        <div class="feature-card animate-fadeInUp animate-delay-2">
+          <div class="feature-icon" aria-hidden="true">👨‍🏫</div>
+          <h3>Expert Tutors</h3>
+          <p>Our experienced educators offer personalized, one-on-one guidance, ensuring each student receives the support they need to thrive academically and spiritually.</p>
+        </div>
+        <div class="feature-card animate-fadeInUp animate-delay-2">
+          <div class="feature-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
+          <h3>We Value Our Students</h3>
+          <p>Every student is supported, encouraged, and empowered to grow, succeed, and reach their unique potential in both learning and personal development.</p>
+        </div>
+        <div class="feature-card animate-fadeInUp animate-delay-2">
+          <div class="feature-icon" aria-hidden="true">👩‍🏫</div>
+          <h3>Male & Female Teachers</h3>
+          <p>Our qualified male and female instructors create a safe, respectful, and inclusive space where every learner feels comfortable, understood, and engaged.</p>
+        </div>
+        <div class="feature-card animate-fadeInUp animate-delay-2">
+          <div class="feature-icon" aria-hidden="true">🕰️</div>
+          <h3>Flexible Timings</h3>
+          <p>We offer adaptable scheduling options so students can learn at their own pace—anytime, anywhere—according to what works best for them.</p>
+        </div>
+        <div class="feature-card animate-fadeInUp animate-delay-2">
+          <div class="feature-icon" aria-hidden="true">💡</div>
+          <h3>Interactive Resources</h3>
+          <p>We use high-quality, engaging materials and digital tools that bring lessons to life and help students understand and apply what they learn.</p>
+        </div>
+        <div class="feature-card animate-fadeInUp animate-delay-2">
+          <div class="feature-icon" aria-hidden="true">📊</div>
+          <h3>Progress Tracking</h3>
+          <p>We monitor student performance closely to ensure steady growth and offer timely feedback for improvement.</p>
+        </div>
+      </div>
+    </section>
+    <!-- END FEATURES/BENEFITS SECTION -->
+
+    <!-- COURSES SECTION -->
+    <section class="courses" id="courses">
+        <div class="section-illustration"><img src="assets/education.svg" alt="Courses Illustration" loading="lazy" style="max-width:200px;width:100%;margin-bottom:1.2rem;"></div>
+        <h2>Our Courses</h2>
+        <p class="courses-intro">Our Quran-focused courses are taught by expert teachers in both one-on-one and small group settings via WhatsApp, Zoom and Google Meet.</p>
+        
+        <div class="course-filters">
+            <div class="filter-group">
+                <h3 class="filter-heading">Platform</h3>
+                <div class="course-tabs platform-tabs">
+                    <button class="course-tab active" data-platform="all">All Platforms</button>
+                    <button class="course-tab" data-platform="whatsapp">WhatsApp</button>
+                    <button class="course-tab" data-platform="zoom">Zoom and Google Meet</button>
+                </div>
+            </div>
+            
+            <!-- Level filter group removed -->
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="course-search" placeholder="Search courses..." class="course-search">
+            <button id="search-btn" class="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="feature-list course-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; justify-content: center; margin: 0 auto;">
+            <!-- Quran Hifdhu -->
+            <div class="feature-card course-feature-card animate-fadeInUp animate-delay-2" data-platforms="whatsapp zoom" style="min-width: 320px; display: flex; flex-direction: column; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; margin: 0 auto; background-color: transparent;">
+                <div class="feature-icon" aria-hidden="true">📖</div>
+                <h3>Quran (Hifdhu)</h3>
+                <p>Memorize the Holy Quran with structured guidance and personalized support.</p>
+                <div class="course-meta" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Duration:</strong> 24-36 months</span>
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Students:</strong> 120+</span>
+                </div>
+                <div class="course-platforms" style="margin-bottom: 1rem; padding: 0.5rem 0;">
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">📱 WhatsApp: 48,000 UGX / $12.9</div>
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">💻 Zoom/Meet: 88,000 UGX / $23.9</div>
+                </div>
+                <a href="#" class="feature-btn" style="display: inline-block; width: 100%; background-color: #2196F3; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; text-align: center; margin-top: auto;">Start Free Trial</a>
+            </div>
+            
+            <!-- Quran Tilaawa -->
+            <div class="feature-card course-feature-card animate-fadeInUp animate-delay-2" data-platforms="whatsapp zoom" style="min-width: 320px; display: flex; flex-direction: column; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; margin: 0 auto; background-color: transparent;">
+                <div class="feature-icon" aria-hidden="true">🎯</div>
+                <h3>Quran (Tilaawa)</h3>
+                <p>Learn to read and recite the Holy Quran with proper tajweed rules.</p>
+                <div class="course-meta" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Duration:</strong> 12-24 months</span>
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Students:</strong> 150+</span>
+                </div>
+                <div class="course-platforms" style="margin-bottom: 1rem; padding: 0.5rem 0;">
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">📱 WhatsApp: 48,000 UGX / $12.9</div>
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">💻 Zoom/Meet: 88,000 UGX / $23.9</div>
+                </div>
+                <a href="#" class="feature-btn" style="display: inline-block; width: 100%; background-color: #2196F3; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; text-align: center; margin-top: auto;">Start Free Trial</a>
+            </div>
+            
+            <!-- Yasarna -->
+            <div class="feature-card course-feature-card animate-fadeInUp animate-delay-2" data-platforms="whatsapp zoom" style="min-width: 320px; display: flex; flex-direction: column; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; margin: 0 auto; background-color: transparent;">
+                <div class="feature-icon" aria-hidden="true">🔤</div>
+                <h3>Yasarna</h3>
+                <p>Build a strong foundation in reading Arabic script with step-by-step classes.</p>
+                <div class="course-meta" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Duration:</strong> 2-4 months</span>
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Students:</strong> 90+</span>
+                </div>
+                <div class="course-platforms" style="margin-bottom: 1rem; padding: 0.5rem 0;">
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">📱 WhatsApp: 48,000 UGX / $12.9</div>
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">💻 Zoom/Meet: 88,000 UGX / $23.9</div>
+                </div>
+                <a href="yasarna-trial.html" class="feature-btn" style="display: inline-block; width: 100%; background-color: #2196F3; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; text-align: center; margin-top: auto;">Start Free Trial</a>
+            </div>
+            
+            <!-- Hadith Memorisation -->
+            <div class="feature-card course-feature-card animate-fadeInUp animate-delay-2" data-platforms="whatsapp zoom" style="min-width: 320px; display: flex; flex-direction: column; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; margin: 0 auto; background-color: transparent;">
+                <div class="feature-icon" aria-hidden="true">📚</div>
+                <h3>Hadith Memorisation</h3>
+                <p>Memorise and understand key Hadiths with practical application.</p>
+                <div class="course-meta" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Duration:</strong> 6-12 months</span>
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Students:</strong> 75+</span>
+                </div>
+                <div class="course-platforms" style="margin-bottom: 1rem; padding: 0.5rem 0;">
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">📱 WhatsApp: 48,000 UGX / $12.9</div>
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">💻 Zoom/Meet: 88,000 UGX / $23.9</div>
+                </div>
+                <a href="#" class="feature-btn" style="display: inline-block; width: 100%; background-color: #2196F3; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; text-align: center; margin-top: auto;">Start Free Trial</a>
+            </div>
+            
+            <!-- Arabic Language -->
+            <div class="feature-card course-feature-card animate-fadeInUp animate-delay-2" data-platforms="whatsapp zoom" style="min-width: 320px; display: flex; flex-direction: column; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; margin: 0 auto; background-color: transparent;">
+                <div class="feature-icon" aria-hidden="true">🗣️</div>
+                <h3>Quranic Arabic</h3>
+                <p>Learn Arabic language fundamentals to enhance your understanding of the Quran.</p>
+                <div class="course-meta" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Duration:</strong> 12-18 months</span>
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Students:</strong> 110+</span>
+                </div>
+                <div class="course-platforms" style="margin-bottom: 1rem; padding: 0.5rem 0;">
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">📱 WhatsApp: 68,000 UGX / $18.4</div>
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">💻 Zoom/Meet: 98,000 UGX / $26.4</div>
+                </div>
+                <a href="#" class="feature-btn" style="display: inline-block; width: 100%; background-color: #2196F3; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; text-align: center; margin-top: auto;">Start Free Trial</a>
+            </div>
+            
+            <!-- Swala -->
+            <div class="feature-card course-feature-card animate-fadeInUp animate-delay-2" data-platforms="whatsapp zoom" style="min-width: 320px; display: flex; flex-direction: column; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; margin: 0 auto; background-color: transparent;">
+                <div class="feature-icon" aria-hidden="true">🕌</div>
+                <h3>Swala</h3>
+                <p>Comprehensive prayer lessons for all ages and backgrounds.</p>
+                <div class="course-meta" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Duration:</strong> 3-6 months</span>
+                    <span class="meta-item" style="padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-right: 0.5rem;"><strong>Students:</strong> 85+</span>
+                </div>
+                <div class="course-platforms" style="margin-bottom: 1rem; padding: 0.5rem 0;">
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">📱 WhatsApp: 48,000 UGX / $12.9</div>
+                    <div class="platform" style="padding: 0.5rem 0; border-bottom: 1px solid #eee; font-weight: 500;">💻 Zoom/Meet: 88,000 UGX / $23.9</div>
+                </div>
+                <a href="#" class="feature-btn" style="display: inline-block; width: 100%; background-color: #2196F3; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; text-align: center; margin-top: auto;">Start Free Trial</a>
+            </div>
+        </div>
+        
+        <div class="fee-trial">
+            <div class="registration-fee">
+                <span class="fee-label">One-time Registration Fee:</span>
+                <span class="fee-amount">10,000</span>
+            </div>
+            <p class="trial">Enjoy a <strong>3 days free trial</strong> before registration!</p>
+        </div>
+    </section>
+    
+    <!-- TALK TO TEACHER SECTION -->
+    <section class="talk-teacher-section" id="talk-teacher-main">
+        <h2>Talk to a Teacher</h2>
+        <p class="talk-teacher-intro">Have questions about our courses? Want to learn more about our teaching methods? Our qualified teachers are ready to assist you!</p>
+        
+        <div class="talk-teacher-options">
+            <div class="talk-option">
+                <div class="talk-icon">📱</div>
+                <h3>WhatsApp Consultation</h3>
+                <p>Chat directly with our teachers on WhatsApp for quick responses and guidance.</p>
+                <a href="https://wa.me/+256700000000" class="talk-btn whatsapp-talk">Chat on WhatsApp</a>
+            </div>
+            
+            <div class="talk-option">
+                <div class="talk-icon">📧</div>
+                <h3>Email Inquiry</h3>
+                <p>Send us a detailed message about your learning goals and questions.</p>
+                <a href="#contact" class="talk-btn email-talk">Send a Message</a>
+            </div>
+            
+            <div class="talk-option">
+                <div class="talk-icon">🗓️</div>
+                <h3>Book a Demo Class</h3>
+                <p>Experience our teaching methods firsthand with a free demo class.</p>
+                <a href="#contact" class="talk-btn demo-talk">Schedule Demo</a>
+            </div>
+        </div>
+        
+        <div class="talk-teacher-note">
+            <p><strong>Note:</strong> Our teachers are available for consultation from 8:00 AM to 8:00 PM, Sunday to Friday.</p>
+        </div>
+    </section>
+    
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials-main">
+        <h2>What Our Students Say</h2>
+        <p class="testimonials-intro">Hear from our students about their learning journey with Iqra Pop</p>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card animate-fadeInUp">
+                <div class="testimonial-quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(33, 150, 243, 0.2)">
+                        <path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"/>
+                    </svg>
+                </div>
+                <p class="testimonial-text">Iqra Pop has transformed my understanding of the Arabic language. The teachers are patient and knowledgeable, and the WhatsApp classes fit perfectly into my busy schedule.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="assets/avatar-1.svg" alt="Student Avatar" loading="lazy">
+                    </div>
+                    <div class="author-info">
+                        <h4>Ahmed Hassan</h4>
+                        <p>Arabic Language Student</p>
+                        <div class="rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-fadeInUp animate-delay-1">
+                <div class="testimonial-quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(33, 150, 243, 0.2)">
+                        <path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"/>
+                    </svg>
+                </div>
+                <p class="testimonial-text">My children have been learning Quran recitation through Iqra Pop's Zoom classes for over a year now. The progress they've made is remarkable, and the teachers are excellent with kids.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="assets/avatar-2.svg" alt="Student Avatar" loading="lazy">
+                    </div>
+                    <div class="author-info">
+                        <h4>Fatima Ali</h4>
+                        <p>Parent of Quran Students</p>
+                        <div class="rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-fadeInUp animate-delay-2">
+                <div class="testimonial-quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(33, 150, 243, 0.2)">
+                        <path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"/>
+                    </svg>
+                </div>
+                <p class="testimonial-text">I started with the Yasarna course as a complete beginner, and now I'm confidently reading Arabic. The flexible scheduling and personalized attention make all the difference.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="assets/avatar-3.svg" alt="Student Avatar" loading="lazy">
+                    </div>
+                    <div class="author-info">
+                        <h4>Ibrahim Omar</h4>
+                        <p>Yasarna Graduate</p>
+                        <div class="rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END TESTIMONIALS SECTION -->
+    
+    <section class="payment-section" id="payment">
+        <div class="payment-info">
+            <h3>How to Pay</h3>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <h4>Mobile Money</h4>
+                    <div class="payment-details">
+                        <div class="payment-detail">
+                            <span class="detail-label">MTN:</span>
+                            <span class="detail-value">+256700000000</span>
+                        </div>
+                        <div class="payment-detail">
+                            <span class="detail-label">Airtel:</span>
+                            <span class="detail-value">+256750000000</span>
+                        </div>
+                        <div class="payment-detail">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value">IQRA POP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <h4>Bank Transfer</h4>
+                    <div class="payment-details">
+                        <div class="payment-detail">
+                            <span class="detail-label">Bank:</span>
+                            <span class="detail-value">ABSA Bank</span>
+                        </div>
+                        <div class="payment-detail">
+                            <span class="detail-label">Account:</span>
+                            <span class="detail-value">1234567890</span>
+                        </div>
+                        <div class="payment-detail">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value">IQRA POP LTD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-note">
+                <p>After making your payment, please send a confirmation message to our WhatsApp number <strong>+256700000000</strong> with your name and transaction details.</p>
+                <p>Our team will process your registration within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Talk to a Teacher section removed -->
+    
+    <section class="support-section" id="support">
+        <div class="container">
+            <div class="support-content">
+                <h2>Support a Student</h2>
+                <p class="support-intro">Your generosity can make a difference in someone's journey to learn Arabic and the Holy Quran. By donating to our scholarship fund, you help provide education to those who cannot afford it.</p>
+                
+                <div class="support-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎓</div>
+                        <h3>Education for All</h3>
+                        <p>Help make Islamic education accessible to everyone regardless of financial circumstances.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🤲</div>
+                        <h3>Ongoing Charity</h3>
+                        <p>Supporting knowledge is a form of Sadaqah Jariyah (continuous charity).</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌍</div>
+                        <h3>Global Impact</h3>
+                        <p>Your contribution helps spread Arabic language learning across communities.</p>
+                    </div>
+                </div>
+                
+                <div class="donation-options">
+                    <h3>How You Can Help</h3>
+                    <div class="donation-amounts">
+                        <button class="donation-amount">10,000</button>
+                        <button class="donation-amount">25,000</button>
+                        <button class="donation-amount">50,000</button>
+                        <button class="donation-amount">100,000</button>
+                        <button class="donation-amount custom">Custom Amount</button>
+                    </div>
+                    <button class="donate-btn">Make Donation</button>
+                    <p class="donation-note">For more information about our scholarship program or to make a donation through mobile money, please contact us at <strong>+256700000000</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Teachers section moved to about.html page -->
+    <!-- Testimonials section removed to avoid duplication -->
+    <!-- CALL TO ACTION SECTION (Qutor-style, blue/white scheme) -->
+    <section class="cta-section animate-fadeInUp" id="cta-section">
+  <div class="section-illustration"><img src="assets/goals.svg" alt="Call to Action Illustration" loading="lazy" style="max-width:170px;width:100%;margin-bottom:1.2rem;"></div>
+      <div class="cta-content">
+        <h2>Ready to Begin Your Learning Journey?</h2>
+        <p>Start your 3-day free trial and experience the Iqra Pop difference today!</p>
+        <a href="register.html" class="cta-btn cta-btn-large">Start Free Trial</a>
+      </div>
+    </section>
+    <!-- END CALL TO ACTION SECTION -->
+
+    <section class="faq" id="faq">
+  <div class="section-illustration"><img src="assets/questions.svg" alt="FAQ Illustration" loading="lazy" style="max-width:140px;width:100%;margin-bottom:1.2rem;"></div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq1">How do I join Iqra Pop?</button>
+                <div class="faq-answer" id="faq1" hidden>
+                    Click the "Start 3 Days Free Trial" button and fill in your details. We'll contact you with next steps to begin your Qur'an learning journey!
+                </div>
+            </div>
+            <div class="faq-item">
+    <button class="faq-question" aria-expanded="false" aria-controls="faq2">What age groups do you teach?</button>
+    <div class="faq-answer" id="faq2" hidden>
+        We teach Qur'an to children, teens, and adults of all ages. Our teaching methods are adapted to each age group's learning style.
+    </div>
+</div>
+<div class="faq-item">
+    <button class="faq-question" aria-expanded="false" aria-controls="faq3">How are classes conducted?</button>
+    <div class="faq-answer" id="faq3" hidden>
+        All Qur'an classes are held online using WhatsApp (48,000 UGX / $12.9) or Zoom/Google Meet (88,000 UGX / $23.9). You will receive links and instructions after registration.
+    </div>
+</div>
+<div class="faq-item">
+    <button class="faq-question" aria-expanded="false" aria-controls="faq4">Is there a free trial?</button>
+    <div class="faq-answer" id="faq4" hidden>
+        Yes, we offer a 3-day free trial for all our Qur'an courses. This gives you the opportunity to experience our teaching methods and decide if they're right for you.
+    </div>
+</div>
+<div class="faq-item">
+    <button class="faq-question" aria-expanded="false" aria-controls="faq5">What Qur'an courses do you offer?</button>
+    <div class="faq-answer" id="faq5" hidden>
+        We offer Qur'an recitation (tajweed), memorization (hifz), Quranic Arabic, Yasarna, Hadith memorisation, and Swala courses for all levels from beginners to advanced students.
+    </div>
+</div>
+<div class="faq-item">
+    <button class="faq-question" aria-expanded="false" aria-controls="faq6">Where can I meet your teachers?</button>
+    <div class="faq-answer" id="faq6" hidden>
+        You can learn about our qualified Qur'an teachers on our <a href="about.html#teachers">About Us page</a>. All our teachers are experienced in teaching Qur'an online.
+    </div>
+</div>
+        </div>
+    </section>
+    
+    <!-- Talk to a Teacher section removed -->
+    <!-- END TALK TO A TEACHER SECTION -->
+    <!-- Footer content moved to main footer at end of document -->
+    
+    <!-- INTERACTIVE QURANIC ARABIC ALPHABET TOOL -->
+    <section class="arabic-alphabet-section" id="arabic-alphabet">
+        <div class="container">
+            <h2>Interactive Qur'anic Arabic Alphabet</h2>
+            <p class="alphabet-intro">Learn the Arabic alphabet used in the Qur'an with our interactive tool. Click on any letter to hear its pronunciation and see examples from the Qur'an.</p>
+            
+            <div class="alphabet-container">
+                <div class="alphabet-grid" id="alphabet-grid">
+                    <!-- Arabic letters will be populated by JavaScript -->
+                </div>
+                
+                <div class="letter-details" id="letter-details">
+                    <div class="letter-display">
+                        <span id="selected-letter">ا</span>
+                    </div>
+                    <div class="letter-info">
+                        <h3 id="letter-name">Alif</h3>
+                        <p><strong>Pronunciation:</strong> <span id="letter-pronunciation">Similar to 'A' as in 'father'</span></p>
+                        <div class="letter-examples">
+                            <h4>Examples:</h4>
+                            <div class="example" id="example-1">
+                                <span class="arabic-word">اللَّه</span>
+                                <span class="transliteration">Allah (God)</span>
+                            </div>
+                            <div class="example" id="example-2">
+                                <span class="arabic-word">أَحَد</span>
+                                <span class="transliteration">Ahad (One) - from Surah Al-Ikhlas</span>
+                            </div>
+                        </div>
+                        <!-- Writing guide section removed -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alphabet-resources">
+                <h3>Additional Qur'anic Resources</h3>
+                <p>Want to learn more? Enroll in our <a href="#courses">Qur'anic Arabic for Beginners</a> course or download our free <a href="#">Qur'anic Arabic Alphabet Practice Sheets</a>.</p>
+                <p>Learning the Arabic alphabet is your first step toward reading the Qur'an in its original language.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="whatsapp-float">
+        <a href="https://wa.me/+256700000000" target="_blank" class="whatsapp-float-btn" aria-label="Contact via WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+        </a>
+    </div>
+    <script src="main.js"></script>
+    <script src="main-animate.js"></script>
+    <script src="main-counters.js"></script>
+    <script src="js/courses.js"></script>
+    <!-- FOOTER SECTION -->
+    <!-- Founder's Message section removed -->
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-about">
+          <strong>About Iqra Pop:</strong> Iqra Pop is dedicated to providing quality Qur'an education online. Our experienced teachers guide students in Quran recitation, memorization, Yasarna, Hadith memorisation, Quranic Arabic, and Swala. All classes are held on WhatsApp, Zoom and Google Meet for your convenience.
+        </div>
+        <div class="footer-links">
+            <a href="privacy.html" target="_blank">Privacy Policy</a> | <a href="terms.html" target="_blank">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com/iqrapop" target="_blank">Facebook</a>
+            <a href="https://twitter.com/iqrapop" target="_blank">Twitter</a>
+            <a href="https://instagram.com/iqrapop" target="_blank">Instagram</a>
+        </div>
+        <div class="footer-copyright">
+            <span>&copy; 2025 Iqra Pop. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+</body>
+</html>

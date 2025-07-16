@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Alphabet Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/arabic-alphabet.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arabic Alphabet Test Page</h1>
+    
+    <section class="arabic-alphabet-section" id="arabic-alphabet">
+        <div class="container">
+            <h2>Interactive Qur'anic Arabic Alphabet</h2>
+            <p class="alphabet-intro">Learn the Arabic alphabet used in the Qur'an with our interactive tool. Click on any letter to hear its pronunciation and see examples from the Qur'an.</p>
+            
+            <div class="alphabet-container">
+                <div class="alphabet-grid" id="alphabet-grid">
+                    <!-- Arabic letters will be populated by JavaScript -->
+                </div>
+                
+                <div class="letter-details" id="letter-details">
+                    <div class="letter-display">
+                        <span id="selected-letter">ا</span>
+                    </div>
+                    <div class="letter-info">
+                        <h3 id="letter-name">Alif</h3>
+                        <p><strong>Pronunciation:</strong> <span id="letter-pronunciation">Similar to 'A' as in 'father'</span></p>
+                        <div class="letter-examples">
+                            <h4>Examples:</h4>
+                            <div class="example" id="example-1">
+                                <span class="arabic-word">اللَّه</span>
+                                <span class="transliteration">Allah (God)</span>
+                            </div>
+                            <div class="example" id="example-2">
+                                <span class="arabic-word">أَحَد</span>
+                                <span class="transliteration">Ahad (One) - from Surah Al-Ikhlas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/arabic-alphabet.js"></script>
+</body>
+</html>

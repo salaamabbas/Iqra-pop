@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Placeholder Person</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#E0E8F5" cx="100" cy="100" r="100"></circle>
+        <g transform="translate(50.000000, 40.000000)" fill="#1A3C6E">
+            <circle cx="50" cy="30" r="30"></circle>
+            <path d="M0,140 C0,101.340068 22.3857625,70 50,70 C77.6142375,70 100,101.340068 100,140 L0,140 Z"></path>
+        </g>
+    </g>
+</svg>

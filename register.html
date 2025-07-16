@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for Free Trial - Iqra Pop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .register-section { max-width: 480px; margin: 6rem auto 2.5rem auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px 0 rgba(25, 118, 210, 0.11); padding: 2.5rem 2rem; }
+    .register-section h1 { color: var(--primary); font-size: 2.2rem; text-align: center; margin-bottom: 1.5rem; }
+    .register-section p { color: #333; text-align: center; margin-bottom: 2rem; }
+    .register-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .register-form label { font-weight: 600; color: var(--primary); margin-bottom: 0.3rem; }
+    .register-form input, .register-form textarea { padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #b3c6e0; font-size: 1rem; }
+    .register-form input:focus, .register-form textarea:focus { outline: 2px solid var(--primary-light); border-color: var(--primary-light); }
+    .register-form button { background: var(--primary); color: #fff; border: none; padding: 1rem 0; border-radius: 8px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: background 0.2s; }
+    .register-form button:hover { background: var(--secondary); }
+    .register-success { color: #388e3c; background: #e8f5e9; border-radius: 8px; padding: 1rem; text-align: center; margin-top: 1.5rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <section class="register-section animate-fadeInUp">
+    <h1>Register for Free Trial</h1>
+    <p>Fill in your details and we’ll get you started with a 3-day free trial at Iqra Pop Online School.</p>
+    <form class="register-form" id="registerForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required autocomplete="name">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+      <label for="phone">Phone Number (WhatsApp preferred)</label>
+      <input type="tel" id="phone" name="phone" required autocomplete="tel">
+      <label for="message">Anything you want to share?</label>
+      <textarea id="message" name="message" rows="3" placeholder="Optional"></textarea>
+      <button type="submit">Start Free Trial</button>
+    </form>
+    <div class="register-success" id="registerSuccess" style="display:none;">Thank you! We’ve received your request. Our team will contact you soon.</div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="index.html" style="color:var(--primary);font-weight:600;text-decoration:underline;">&larr; Back to Home</a>
+    </div>
+  </section>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('registerForm').style.display = 'none';
+      document.getElementById('registerSuccess').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

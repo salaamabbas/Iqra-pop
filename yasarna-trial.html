@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasarna Free Trial - Iqra Pop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/enhanced-visibility.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .trial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .trial-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .trial-hero h1 {
+            color: #0a2550;
+            margin-bottom: 1rem;
+        }
+        
+        .trial-hero p {
+            font-size: 1.1rem;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .trial-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .trial-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .trial-section h2 {
+            color: #0a2550;
+            margin-bottom: 1rem;
+        }
+        
+        .trial-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .trial-step {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .step-number {
+            background-color: #1a3c6e;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1a3c6e;
+        }
+        
+        .trial-form {
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .form-submit:hover {
+            background-color: #0f2952;
+        }
+        
+        .trial-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            color: #1a3c6e;
+        }
+        
+        .benefit-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #0a2550;
+        }
+        
+        .sample-preview {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .sample-preview img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pdf-preview {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        
+        .pdf-preview a {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1a3c6e;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-preview a:hover {
+            background-color: #0f2952;
+        }
+        
+        .pdf-icon {
+            margin-right: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .trial-content {
+                flex-direction: row;
+            }
+            
+            .trial-section.form-section {
+                flex: 1;
+            }
+            
+            .trial-section.info-section {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Iqra Pop</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li data-tooltip="Go to homepage"><a href="index.html">Home</a></li>
+                <li data-tooltip="About our school"><a href="about.html">About</a></li>
+                <li data-tooltip="View all courses"><a href="index.html#courses">Courses</a></li>
+                <li data-tooltip="How to pay"><a href="index.html#payment">Fees</a></li>
+                <li data-tooltip="Meet our teachers"><a href="index.html#teachers">Teachers</a></li>
+                <li data-tooltip="Get in touch"><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- END HEADER SECTION -->
+
+    <main class="trial-container">
+        <section class="trial-hero">
+            <h1>Start Your Free Yasarna Trial</h1>
+            <p>Experience the first step in your Arabic learning journey with our structured and effective Yasarna program.</p>
+        </section>
+
+        <div class="trial-content">
+            <section class="trial-section form-section">
+                <h2>Register for Your Free Trial</h2>
+                <p>Fill out the form below to get started with your free Yasarna trial lesson. Our teacher will contact you to schedule your session.</p>
+                
+                <form class="trial-form" id="trialForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number (WhatsApp)</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="platform">Preferred Platform</label>
+                        <select id="platform" name="platform" required>
+                            <option value="">Select a platform</option>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="zoom">Zoom/Google Meet</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Previous Arabic Experience</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select your experience level</option>
+                            <option value="none">None - Complete Beginner</option>
+                            <option value="basic">Basic - Know some letters</option>
+                            <option value="intermediate">Intermediate - Can read slowly</option>
+                            <option value="advanced">Advanced - Need to improve</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Any questions or special requirements?</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Submit Registration</button>
+                </form>
+            </section>
+            
+            <section class="trial-section info-section">
+                <h2>What to Expect</h2>
+                <p>Our Yasarna free trial gives you a taste of our structured approach to learning Arabic script.</p>
+                
+                <div class="trial-steps">
+                    <div class="trial-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Register</h3>
+                            <p>Complete the form with your contact details and preferences.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trial-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Confirmation</h3>
+                            <p>Receive confirmation and scheduling details via WhatsApp or email.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trial-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Free Trial Lessons</h3>
+                            <p>Join your 3 days trial lessons with one of our qualified teachers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trial-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Enrollment</h3>
+                            <p>If you enjoy the trial, proceed with enrollment in the full Yasarna course.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Benefits of Yasarna</h2>
+                <div class="trial-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📚</div>
+                        <div class="benefit-title">Structured Learning</div>
+                        <p>Step-by-step approach to mastering Arabic script</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔤</div>
+                        <div class="benefit-title">Letter Recognition</div>
+                        <p>Learn to identify and write all Arabic letters</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🗣️</div>
+                        <div class="benefit-title">Proper Pronunciation</div>
+                        <p>Master the correct sounds of Arabic letters</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📚</div>
+                        <div class="benefit-title">Reading Fluency</div>
+                        <p>Build confidence in reading Arabic text</p>
+                    </div>
+                </div>
+                
+                <div class="pdf-preview">
+                    <a href="assets/YASARNA.pdf" download>
+                        <span class="pdf-icon">📥</span> Download Yasarna Guide
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">Iqra Pop</span>
+                <p>Quality Islamic Education Online</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="index.html#courses">Courses</a>
+                <a href="index.html#payment">Fees</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>WhatsApp: +256700000000</p>
+                <p>Email: info@iqrapop.com</p>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="https://facebook.com/iqrapop" target="_blank">Facebook</a>
+            <a href="https://twitter.com/iqrapop" target="_blank">Twitter</a>
+            <a href="https://instagram.com/iqrapop" target="_blank">Instagram</a>
+        </div>
+        <div class="footer-copyright">
+            <span>&copy; 2025 Iqra Pop. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <script>
+        // Navigation toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('nav-links');
+            
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+                navToggle.classList.toggle('active');
+            });
+            
+            // Form submission handling
+            const trialForm = document.getElementById('trialForm');
+            
+            trialForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real implementation, you would send this data to a server
+                // For now, we'll just show a success message
+                
+                const formData = new FormData(trialForm);
+                let formValues = {};
+                
+                for (let [key, value] of formData.entries()) {
+                    formValues[key] = value;
+                }
+                
+                console.log('Form submitted with values:', formValues);
+                
+                // Show success message
+                trialForm.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <h2 style="color: #1a3c6e; margin-bottom: 1rem;">Registration Successful!</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 1rem;">Thank you for registering for the Yasarna free trial.</p>
+                        <p>Our team will contact you shortly via WhatsApp or email to schedule your free trial lesson.</p>
+                        <p style="margin-top: 2rem;">
+                            <a href="index.html" style="color: #1a3c6e; text-decoration: underline;">Return to Homepage</a>
+                        </p>
+                    </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>

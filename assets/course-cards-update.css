@@ -1,0 +1,91 @@
+/* Updated Course Cards CSS */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.course-feature-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-feature-card .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.course-feature-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: #2196F3;
+}
+
+.course-feature-card p {
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.meta-item {
+    background-color: #f5f5f5;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.course-platforms {
+    margin-bottom: 1rem;
+}
+
+.platform {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.platform:last-child {
+    border-bottom: none;
+}
+
+.feature-btn {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: auto;
+}
+
+.feature-btn:hover {
+    background-color: #0d8aee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+}

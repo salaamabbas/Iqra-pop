@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Iqra Pop</title>
+    <meta name="description" content="Learn about Iqra Pop's mission, vision, values, and fee structure for our online Islamic education programs.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Enhanced Text Visibility -->
+    <link rel="stylesheet" href="assets/enhanced-visibility.css">
+    <style>
+        /* About page specific styles */
+        .about-hero {
+            background-color: #1a3c6e;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .about-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .about-card h3 {
+            color: #0a2550;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .about-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .fees-section {
+            background-color: #f8f9fa;
+            padding: 3rem 2rem;
+        }
+        
+        .fees-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .fees-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .fees-table th, .fees-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .fees-table th {
+            background-color: #1a3c6e;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .fees-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .fees-table tr:hover {
+            background-color: #f0f5ff;
+        }
+        
+        .payment-methods {
+            margin-top: 3rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-methods h3 {
+            color: #0a2550;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .payment-option {
+            margin-bottom: 1.5rem;
+        }
+        
+        .payment-option h4 {
+            color: #1a3c6e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-option p {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .note-box {
+            background-color: #f0f5ff;
+            border-left: 4px solid #1a3c6e;
+            padding: 1rem;
+            margin: 2rem 0;
+            color: #333;
+        }
+        
+        /* Founder's Message Styling */
+        .founder-message {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .founder-image {
+            text-align: center;
+        }
+        
+        .founder-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1a3c6e;
+        }
+        
+        .founder-content {
+            flex: 1;
+        }
+        
+        .founder-content h3 {
+            color: #0a2550;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        .founder-content h4 {
+            color: #1a3c6e;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .founder-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .founder-signature {
+            font-style: italic;
+            margin-top: 1.5rem;
+            color: #1a3c6e;
+            font-weight: 600;
+        }
+        
+        @media (min-width: 768px) {
+            .founder-message {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            
+            .founder-image {
+                flex: 0 0 220px;
+            }
+        }
+        
+        /* Resources Section Styling */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .resource-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a3c6e;
+        }
+        
+        .resource-card h3 {
+            color: #0a2550;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .resource-card p {
+            margin-bottom: 1.5rem;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        .resource-download-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1a3c6e;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .resource-download-btn:hover {
+            background-color: #0f2952;
+        }
+        
+        .download-icon {
+            margin-right: 0.5rem;
+        }
+        
+        .resources-note {
+            background-color: #f0f5ff;
+            border-left: 4px solid #1a3c6e;
+            padding: 1rem;
+            margin-top: 2rem;
+            color: #333;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #1a3c6e;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #0f2952;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .fees-table {
+                font-size: 0.9rem;
+            }
+            
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TOP BANNER ANNOUNCEMENT BAR -->
+    <div class="top-banner" id="top-banner">
+      <marquee class="banner-message">🎉 Get a 10% discount when you pay for 3 months at once! 🎉</marquee>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo-placeholder.png" alt="Iqra Pop Logo" height="48">
+            <span>Iqra Pop</span>
+        </div>
+        <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li data-tooltip="Go to homepage"><a href="index.html">Home</a></li>
+            <li data-tooltip="About our school"><a href="about.html" class="active">About</a></li>
+            <li data-tooltip="View all courses"><a href="index.html#courses">Courses</a></li>
+            <li data-tooltip="How to pay"><a href="index.html#payment">Fees</a></li>
+            <li data-tooltip="Meet our teachers"><a href="index.html#teachers">Teachers</a></li>
+            <li data-tooltip="Support a student"><a href="index.html#support">Donate</a></li>
+            <li data-tooltip="Student feedback"><a href="index.html#testimonials-main">Testimonials</a></li>
+            <li data-tooltip="Common questions"><a href="index.html#faq">FAQ</a></li>
+            <li data-tooltip="Get in touch"><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="about-hero">
+        <h1>About Iqra Pop</h1>
+        <p>Dedicated to providing quality Islamic education online since 2020</p>
+    </div>
+    
+    <section class="about-section">
+        <h2>Our Story</h2>
+        <p>Iqra Pop was founded with a simple yet powerful vision: to make quality Islamic education accessible to everyone, regardless of their location or background. Our journey began in Uganda, where we identified a need for structured, accessible Quranic education that could reach students beyond traditional classroom settings.</p>
+        
+        <div class="founder-message">
+            <div class="founder-image">
+                <img src="assets/founder.jpg" alt="Sheikh Abdulsalaam Abbas Ssenkindu" onerror="this.src='assets/placeholder-person.svg'; this.onerror=null;">
+            </div>
+            <div class="founder-content">
+                <h3>Founder's Message</h3>
+                <h4>Sheikh Abdulsalaam Abbas Ssenkindu</h4>
+                <p>Assalamu Alaikum,</p>
+                <p>Iqra Pop was founded to make quality Islamic education accessible to all. The name "Iqra" (Read!) honors the first word revealed to Prophet Muhammad (PBUH), emphasizing the importance of knowledge in Islam.</p>
+                <p>Our dedicated teachers guide students in Quran recitation, memorization, and Quranic Arabic with personalized attention. We believe in nurturing both mind and soul through quality Qur'an education that's accessible regardless of location or financial circumstances.</p>
+                <p>We invite you to join our community and grow with us in knowledge and faith.</p>
+                <p class="founder-signature">Sheikh Abdulsalaam Abbas Ssenkindu<br>Founder, Iqra Pop</p>
+            </div>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>Our goal is to foster a strong bond between servants and their Creator. We aim to achieve this by providing accessible and engaging Quranic education while considering the financial status for all. Through personalized instruction and modern teaching methods, we strive to make Islamic learning a joyful and transformative experience.</p>
+            </div>
+            
+            <div class="about-card">
+                <h3>Our Vision</h3>
+                <p>We envision becoming a leading online Qur'an school providing quality education that strengthens the relationship between a servant and The Creator. We aim to create a global community of learners who are confident in their Islamic knowledge and practice, and who can pass on this knowledge to future generations.</p>
+            </div>
+            
+            <div class="about-card">
+                <h3>Our Values</h3>
+                <ul>
+                    <li><strong>Flexibility:</strong> Adapting to each student's learning pace and schedule</li>
+                    <li><strong>Excellence:</strong> Maintaining the highest standards in teaching and curriculum</li>
+                    <li><strong>Teamwork:</strong> Collaborating to create the best learning environment</li>
+                    <li><strong>Integrity:</strong> Upholding Islamic principles in all our interactions</li>
+                    <li><strong>Progress:</strong> Continuously improving our methods and resources</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="fees-section">
+        <div class="fees-container">
+            <h2>Our Fee Structure</h2>
+            <p>At Iqra Pop, we strive to make quality Islamic education affordable and accessible to all. Our fee structure is designed to accommodate different learning preferences and financial situations.</p>
+            
+            <div class="note-box">
+                <strong>Note:</strong> To complete your registration with us, you must pay a non-refundable registration fee of Ushs. 10,000 only once, followed by the monthly fees as outlined below.
+            </div>
+            
+            <h3>Monthly Course Fees</h3>
+            
+            <table class="fees-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>WhatsApp Classes</th>
+                        <th>Zoom/Google Meet Classes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yasarna</td>
+                        <td>Ugx. 48,000 ($12.9)</td>
+                        <td>Ugx. 88,000 ($23.9)</td>
+                    </tr>
+                    <tr>
+                        <td>Quran (Tilaawa)</td>
+                        <td>Ugx. 48,000 ($12.9)</td>
+                        <td>Ugx. 88,000 ($23.9)</td>
+                    </tr>
+                    <tr>
+                        <td>Quran (Hifdhu)</td>
+                        <td>Ugx. 48,000 ($12.9)</td>
+                        <td>Ugx. 88,000 ($23.9)</td>
+                    </tr>
+                    <tr>
+                        <td>Hadith Memorisation</td>
+                        <td>Ugx. 48,000 ($12.9)</td>
+                        <td>Ugx. 88,000 ($23.9)</td>
+                    </tr>
+                    <tr>
+                        <td>Quranic Arabic</td>
+                        <td>Ugx. 68,000 ($18.4)</td>
+                        <td>Ugx. 98,000 ($26.4)</td>
+                    </tr>
+                    <tr>
+                        <td>Swala</td>
+                        <td>Ugx. 48,000 ($12.9)</td>
+                        <td>Ugx. 88,000 ($23.9)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="note-box">
+                <strong>Special Offer:</strong> Get a 10% discount when you pay for 3 months at once! You can pay a maximum of three months at once.
+            </div>
+            
+            <div class="payment-methods">
+                <h3>How to Pay</h3>
+                
+                <div class="payment-option">
+                    <h4>Pay Using MTN Uganda</h4>
+                    <p>Send to: <strong>+256700000000</strong> in the names of IQRA POP</p>
+                </div>
+                
+                <div class="payment-option">
+                    <h4>Pay Using Airtel Uganda</h4>
+                    <p>Send to: <strong>+256700000000</strong> in the names of IQRA POP</p>
+                </div>
+                
+                <p>After paying, please send us a WhatsApp message to <strong>+256700000000</strong> and verify your transaction. Our team will be happy to process and finish your registration process.</p>
+                
+                <a href="index.html#courses" class="cta-button">Explore Our Courses</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <h2>Learning Resources</h2>
+        <p>At Iqra Pop, we believe in providing valuable resources to help our students succeed in their Islamic education journey. Below are some free resources that you can download and use to enhance your learning experience.</p>
+        
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📖</div>
+                <h3>Yasarna Guide</h3>
+                <p>A comprehensive guide to learning Arabic script through the Yasarna method. Perfect for beginners starting their Arabic learning journey.</p>
+                <a href="assets/YASARNA.pdf" class="resource-download-btn" download>
+                    <span class="download-icon">📥</span> Download PDF
+                </a>
+            </div>
+            
+            <!-- Additional resource cards can be added here in the future -->
+        </div>
+        
+        <div class="resources-note">
+            <p>These resources are provided free of charge as part of our commitment to making Islamic education accessible to all. We regularly update and add new resources, so check back often for more learning materials.</p>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <h2>Support a Student</h2>
+        <p>Help make quality Islamic education accessible to those who cannot afford it. Your donation can sponsor a student's education and make a lasting impact on their life and spiritual journey.</p>
+        
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Why Donate?</h3>
+                <p>Your donation helps provide Islamic education to students who otherwise couldn't afford it. By supporting a student, you're not only helping them gain valuable knowledge but also earning continuous rewards as they apply what they learn.</p>
+                <p>"When a person dies, his deeds come to an end except for three: ongoing charity, beneficial knowledge, or a righteous child who prays for him." - Prophet Muhammad (PBUH)</p>
+            </div>
+            
+            <div class="about-card">
+                <h3>How Your Donation Helps</h3>
+                <ul>
+                    <li>Provides full or partial scholarships to deserving students</li>
+                    <li>Supports the development of learning materials</li>
+                    <li>Helps improve our teaching technology and resources</li>
+                    <li>Enables us to reach more students in underserved areas</li>
+                </ul>
+            </div>
+            
+            <div class="about-card">
+                <h3>Make a Donation</h3>
+                <p>To make a donation, please use the same payment methods as listed above and specify that your payment is a donation.</p>
+                <p>For more information about our donation program or to set up a recurring donation, please contact us at <strong>info@iqrapop.com</strong> or WhatsApp <strong>+256700000000</strong>.</p>
+                <a href="index.html#support" class="cta-button">Donate Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-section" id="teachers">
+        <h2>Meet Our Teachers</h2>
+        <p>Our qualified and experienced teachers are dedicated to providing quality Qur'an education to students of all levels.</p>
+        
+        <div class="teacher-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+            <div class="teacher-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); padding: 2rem; text-align: center; transition: transform 0.3s ease;">
+                <img src="assets/teacher1-placeholder.jpg" alt="Ustadh Ahmad - Quran & Yasarna Specialist" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h4>Ustadh Ahmad</h4>
+                <p>Quran & Yasarna Specialist</p>
+            </div>
+            <div class="teacher-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); padding: 2rem; text-align: center; transition: transform 0.3s ease;">
+                <img src="assets/teacher2-placeholder.jpg" alt="Ustadha Fatima - Hadith & Quranic Arabic Expert" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h4>Ustadha Fatima</h4>
+                <p>Hadith & Quranic Arabic Expert</p>
+            </div>
+            <div class="teacher-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); padding: 2rem; text-align: center; transition: transform 0.3s ease;">
+                <img src="assets/teacher3-placeholder.jpg" alt="Ustadh Yusuf - Swala & Qur'anic Studies" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                <h4>Ustadh Yusuf</h4>
+                <p>Swala & Qur'anic Studies</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+      <div class="footer-content">
+        <div class="footer-about">
+          <strong>About Iqra Pop:</strong> Iqra Pop is dedicated to providing quality Qur'an education online. Our experienced teachers guide students in Quran recitation, memorization, Yasarna, Hadith memorisation, Quranic Arabic, and Swala. All classes are held on WhatsApp, Zoom and Google Meet for your convenience.
+        </div>
+        <div class="footer-links">
+            <a href="privacy.html" target="_blank">Privacy Policy</a> | <a href="terms.html" target="_blank">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com/iqrapop" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com/iqrapop" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com/iqrapop" target="_blank">Instagram</a> | 
+            <a href="https://youtube.com/iqrapop" target="_blank">YouTube</a>
+        </div>
+        <div class="footer-contact">
+            <p>Contact: +256700000000 | info@iqrapop.com</p>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 Iqra Pop. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/+256700000000" class="whatsapp-float" target="_blank">
+        <img src="assets/whatsapp-icon.svg" alt="WhatsApp Chat" />
+    </a>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

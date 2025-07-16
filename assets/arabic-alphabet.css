@@ -1,0 +1,179 @@
+/* Arabic Alphabet Interactive Tool Styles */
+.arabic-alphabet-section {
+    padding: 60px 0;
+    background-color: #f0f8ff; /* Very light blue background */
+}
+
+.alphabet-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.alphabet-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alphabet-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 60px); /* Fixed 7 columns for 28 letters (4 rows) */
+    gap: 10px;
+    min-width: 300px;
+    justify-content: center;
+}
+
+.letter-card {
+    background-color: #e6f2ff; /* Light blue background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 24px;
+    font-family: 'Scheherazade New', serif;
+    color: #2171b5; /* Darker blue text */
+}
+
+.letter-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #bbdefb; /* Lighter blue on hover */
+}
+
+.letter-card.active {
+    background-color: #1976d2; /* Darker blue when active */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.letter-details {
+    flex: 1;
+    background-color: #e6f2ff; /* Light blue background */
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    min-width: 300px;
+}
+
+.letter-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#selected-letter {
+    font-size: 120px;
+    font-family: 'Scheherazade New', serif;
+    color: #1e88e5; /* Bright blue color */
+    display: block;
+}
+
+.letter-info h3 {
+    color: #1565c0; /* Darker blue for letter name */
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.play-sound-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.play-sound-btn:hover {
+    background-color: #2980b9;
+}
+
+.play-sound-btn::before {
+    content: "🔊";
+}
+
+.letter-examples {
+    margin-top: 20px;
+}
+
+.letter-examples h4 {
+    color: #1565c0; /* Darker blue for heading */
+    margin-bottom: 10px;
+}
+
+.example .arabic-word {
+    color: #1e88e5; /* Bright blue for Arabic words */
+    font-family: 'Scheherazade New', serif;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.example .transliteration {
+    color: #2196f3; /* Medium blue for transliteration */
+    display: block;
+    margin-bottom: 15px;
+}
+
+#letter-pronunciation {
+    color: #0d47a1; /* Deep blue for pronunciation */
+}
+
+.example {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+/* These styles are now handled by .example .arabic-word and .example .transliteration above */
+
+/* Writing guide styling removed */
+
+.alphabet-resources {
+    margin-top: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alphabet-resources a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.alphabet-resources a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .alphabet-container {
+        flex-direction: column;
+    }
+    
+    .alphabet-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+    
+    #selected-letter {
+        font-size: 100px;
+    }
+}
+
+/* Font for Arabic text */
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap');
